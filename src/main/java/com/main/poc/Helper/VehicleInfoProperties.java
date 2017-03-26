@@ -94,7 +94,7 @@ public class VehicleInfoProperties {
 
         public boolean verify()
         {
-            if(type==null || price==-1 || size==-1)
+            if(type==null || price<=0 || size<=0)
                 return false;
             else
                 return true;
@@ -103,7 +103,7 @@ public class VehicleInfoProperties {
 
         @Override
         public String toString() {
-            return "\n"+type+" at price of "+price;
+            return type+" are parked at price of "+price;
         }
     }
 

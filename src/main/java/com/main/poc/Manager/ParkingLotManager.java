@@ -54,7 +54,14 @@ public class ParkingLotManager {
             int numberOfParking= Utils. <Integer>  getInput("Please provide number of parking lots available",
                     t->{
                         try {
-                           return Utils.convertStringToInt(t);
+                           Integer i= Utils.convertStringToInt(t);
+
+                           if(i.intValue()<=0)
+                           {
+                                System.out.println("Number of Parking lots cant be less then or equal to 0");
+                                return null;
+                           }
+                           return  i;
 
                         } catch (Exception e) {
                             return null;
@@ -76,7 +83,7 @@ public class ParkingLotManager {
     public void help()
     {
 
-        System.out.println("-----------------Parking Help--------------------------");
+        System.out.println("-----------------Parking Help--------------------------\n");
         helper.getVechileTypeToInfoMap().entrySet().stream().forEach(
             t->  System.out.println( "               "+t.getValue())
         );
@@ -84,7 +91,11 @@ public class ParkingLotManager {
         System.out.println("To Park type ENTER <vehicle type> for e.g ENTER CAR");
         System.out.println("To Park type EXIT <vehicle type> <number of hours> for e.g EXIT CAR 2");
         System.out.println("To get report type REPORT");
+        System.out.println("To get help type HELP");
+        System.out.println("To get history of activity type ACTIVITY");
         System.out.println("To stop type SHUTDOWN");
+        System.out.println("\n**COMMANDS ARE NOT CASE SENSITIVE");
+
 
     }
 
@@ -115,6 +126,8 @@ public class ParkingLotManager {
     {
         store.report();
     }
+
+    public void activity() {store.showActivity();}
 
 
 

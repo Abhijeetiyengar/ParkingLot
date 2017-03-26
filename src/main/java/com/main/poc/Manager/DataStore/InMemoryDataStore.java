@@ -59,6 +59,18 @@ public class InMemoryDataStore implements  DataStore {
         parkingLotVO.setTotalNumberOfParkingLot(numberOfParkingSpace);
     }
 
+    @Override
+    public void showActivity()
+    {
+        System.out.println("\n");
+
+        if(activityList.size()!=0)
+            activityList.stream().forEach(
+                    t-> System.out.println(t)
+            );
+        else
+            System.out.println("No Activity has been performed");
+    }
 
 
 

@@ -29,7 +29,7 @@ public class CliVisualizer {
         for(;;)
         {
 
-            ParsedStatusVO statusVO= Utils.<ParsedStatusVO>getInput("Enter Command you want to perform ",this::validateStart);
+            ParsedStatusVO statusVO= Utils.<ParsedStatusVO>getInput("\nEnter Command you want to perform ",this::validateStart);
 
             if(statusVO==null)
                 continue;
@@ -52,6 +52,11 @@ public class CliVisualizer {
                             manager.help();
                             break;
 
+                case ACTIVITY:
+
+                            manager.activity();
+                            break;
+
                 case REPORT:
 
                             manager.report();
@@ -60,7 +65,7 @@ public class CliVisualizer {
 
             }
 
-            System.out.println("Operation Performed Successfully ");
+            System.out.println("\nOperation Performed Successfully ");
 
 
         }
@@ -106,7 +111,7 @@ public class CliVisualizer {
                                 i=Utils.convertStringToInt(commandArr[2]);
                                 if(i<=0)
                                 {
-                                    System.out.println("Time cannot be less then 0 for Exit command, type help to find information");
+                                    System.out.println("Time cannot be less then or equal 0 for Exit command, type help to find information");
                                 }
                             } catch (Exception e) {
                                 System.out.println("Invalid time provided for Exit command, type help to find information");
@@ -122,6 +127,10 @@ public class CliVisualizer {
             case "help":
                             //manager.help();
                         return  new ParsedStatusVO(OperationStatusEum.HELP,null,-1);
+
+            case "activity":
+                //manager.help();
+                return  new ParsedStatusVO(OperationStatusEum.ACTIVITY,null,-1);
 
             case "shutdown":
 
@@ -166,5 +175,5 @@ public class CliVisualizer {
         }
     }
 
-    public enum OperationStatusEum{ENTER,EXIT,REPORT,HELP};
+    public enum OperationStatusEum{ENTER,EXIT,REPORT,HELP,ACTIVITY};
 }

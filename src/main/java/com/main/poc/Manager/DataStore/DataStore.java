@@ -17,6 +17,8 @@ public interface DataStore {
 
     void setParkingSpace(int numberOfParkingSpace);
 
+    void showActivity();
+
 
 
 }
