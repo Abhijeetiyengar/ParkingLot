@@ -62,6 +62,18 @@ public class VisualizerTest {
         statusVO=visualizer.validateStart("exit car 0");
         Assert.assertEquals(statusVO,null);
 
+        statusVO=visualizer.validateStart(null);
+        Assert.assertEquals(statusVO,null);
+
+        statusVO=visualizer.validateStart(" ");
+        Assert.assertEquals(statusVO,null);
+
+        statusVO=visualizer.validateStart("");
+        Assert.assertEquals(statusVO,null);
+
+        statusVO=visualizer.validateStart("∂");
+        Assert.assertEquals(statusVO,null);
+
 
 
     }
