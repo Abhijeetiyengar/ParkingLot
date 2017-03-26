@@ -4,6 +4,7 @@ import com.main.poc.Helper.VehicleInfoProperties;
 
 /**
  * Created by abhijeetiyengar on 3/25/17.
+ *
  */
 public interface DataStore {
 

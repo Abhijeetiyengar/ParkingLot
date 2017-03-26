@@ -8,6 +8,9 @@ import org.springframework.stereotype.Component;
 
 /**
  * Created by abhijeetiyengar on 3/25/17.
+ *
+ * Class which leads to visualization on CLI.
+ *
  */
 @Component
 public class CliVisualizer {

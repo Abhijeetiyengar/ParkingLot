@@ -10,6 +10,9 @@ import java.util.List;
 
 /**
  * Created by abhijeetiyengar on 3/25/17.
+ *
+ * An in-memory implementation for keeping track of parking lot
+ *
  */
 public class InMemoryDataStore implements  DataStore {
 

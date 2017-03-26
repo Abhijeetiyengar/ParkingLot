@@ -58,7 +58,7 @@ public class ParkingLotManager {
 
                            if(i.intValue()<=0)
                            {
-                                System.out.println("Number of Parking lots cant be less then or equal to 0");
+                                System.out.println("Number of Parking lots cant be less than or equal to 0");
                                 return null;
                            }
                            return  i;
@@ -89,7 +89,7 @@ public class ParkingLotManager {
         );
         System.out.println(String.format("\nPrices are per %d hour",helper.getHelper().getPrice_in_multiple_of_hours()));
         System.out.println("To Park type ENTER <vehicle type> for e.g ENTER CAR");
-        System.out.println("To Park type EXIT <vehicle type> <number of hours> for e.g EXIT CAR 2");
+        System.out.println("To Un-Park type EXIT <vehicle type> <number of hours> for e.g EXIT CAR 2");
         System.out.println("To get report type REPORT");
         System.out.println("To get help type HELP");
         System.out.println("To get history of activity type ACTIVITY");
@@ -105,7 +105,7 @@ public class ParkingLotManager {
 
         if(info==null)
         {
-            System.out.print("Invalid Vehicle Type provided , type help to find information");
+            System.out.print("Invalid Vehicle Type provided , type help to find information. \n");
         }
 
         return  info;

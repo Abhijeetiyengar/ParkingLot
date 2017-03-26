@@ -8,8 +8,12 @@ To Execute :
     java -jar ParkingLotProject-1.0-SNAPSHOT.jar 
     
  
- As its a spring boot application , you could chnage properties using System properties (-d) or provide new application.properties 
- from System properties.
+As its a spring boot application , you could chnage properties using System properties (-d) or provide new application.properties
+from System properties.
+
+
+Currently we only provide in-memory implementation . We can extend it to provide for disk based system too which would help in
+making application cash proof.
  
  
 
