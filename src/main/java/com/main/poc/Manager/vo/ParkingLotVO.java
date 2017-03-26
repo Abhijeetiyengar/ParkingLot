@@ -47,7 +47,7 @@ public class ParkingLotVO {
     public  boolean entry(VehicleInfoProperties.VehicleInfo info)
     {
         if(currentSlots<info.getSize()) {
-            System.out.println("Apologize , but we don't have enough space for your vehicle");
+            System.out.println("Apology , but we don't have enough space for your vehicle");
             return false;
         }
 
@@ -61,7 +61,7 @@ public class ParkingLotVO {
     public boolean exit(VehicleInfoProperties.VehicleInfo info, float numberOfHours)
     {
         if(statusMap.get(info.getType()).incoming-statusMap.get(info.getType()).outgoing<=0) {
-            System.out.println("Apologize , but not possible to exit as there aren't enough vehicles of your type standing");
+            System.out.println("Apology , but not possible to exit as there aren't enough vehicles of your type standing");
             return false;
         }
         currentSlots+=info.getSize();

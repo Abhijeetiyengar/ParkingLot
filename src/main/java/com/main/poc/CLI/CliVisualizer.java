@@ -111,7 +111,7 @@ public class CliVisualizer {
                                 i=Utils.convertStringToInt(commandArr[2]);
                                 if(i<=0)
                                 {
-                                    System.out.println("Time cannot be less then or equal 0 for Exit command, type help to find information");
+                                    System.out.println("Time cannot be less than or equal 0 for Exit command, type help to find information");
                                 }
                             } catch (Exception e) {
                                 System.out.println("Invalid time provided for Exit command, type help to find information");

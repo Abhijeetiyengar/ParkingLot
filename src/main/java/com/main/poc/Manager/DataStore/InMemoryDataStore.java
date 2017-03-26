@@ -39,7 +39,7 @@ public class InMemoryDataStore implements  DataStore {
 
         parkingLotVO.exit(vehicleInfo,numberOfHours);
 
-        activityList.add(String.format("%s exited at %s",vehicleInfo.getType(), LocalDateTime.now().toString()));
+        activityList.add(String.format("%s exited at %s with hours %d",vehicleInfo.getType(), LocalDateTime.now().toString(),numberOfHours));
 
     }
 
