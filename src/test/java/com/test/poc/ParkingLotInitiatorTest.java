@@ -16,13 +16,11 @@ import org.springframework.context.annotation.FilterType;
                         value = {
                                 ParkingLotInitiator.class,
 
-
                         })
         })
 public class ParkingLotInitiatorTest {
 
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         SpringApplication.run(ParkingLotInitiatorTest.class, args);
     }
 }
