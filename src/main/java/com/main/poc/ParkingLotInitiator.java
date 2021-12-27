@@ -24,6 +24,9 @@ public class ParkingLotInitiator {
         visualizer.createInitMessage();
     }
 
+    /*
+        This is start of main program
+     */
     public static void main(String[] args) throws Exception {
         SpringApplication.run(ParkingLotInitiator.class, args);
     }
